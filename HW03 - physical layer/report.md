@@ -8,8 +8,8 @@
 
 ## Шаги выполнеия задания
 
-1. Создаем ВМ с Ubuntu 22.04 в VirtualBox
-2. Устанавливаем на ВМ PostgreSQL 15 через sudo apt
+1. Создаем VM с Ubuntu 22.04 в VirtualBox
+2. Устанавливаем на VM PostgreSQL 15 через sudo apt
 ```
 sudo apt install -y postgresql-common
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
@@ -23,7 +23,7 @@ sudo -u postgres pg_lsclusters
 Ver Cluster Port Status Owner    Data directory              Log file
 15  main    5432 online postgres /var/lib/postgresql/15/main /var/log/postgresql/postgresql-15-main.log
 ```
-4. Заходим из под пользователя postgres в psql создаем произвольную таблицу с произвольным содержимым
+4. Заходим из под пользователя postgres в psql и создаем произвольную таблицу с произвольным содержимым
 ```
 sudo -u postgres psql
 ```
@@ -50,7 +50,7 @@ sudo -u postgres pg_lsclusters
 Ver Cluster Port Status Owner    Data directory              Log file
 15  main    5432 down   postgres /var/lib/postgresql/15/main /var/log/postgresql/postgresql-15-main.log
 ```
-7. Создаем и добавляем новый диск к ВМ размером 10GB
+7. Создаем и добавляем новый диск к VM размером 10GB
     1. Останавливаем VM c Postgres
     2. В настройках VM в разделе "Носители"->"Устройства"->"Контроллер: SATA" создаем и добавляем жесткий диск размером 10GB
 8. Инициализируем диск
